@@ -11,12 +11,13 @@ function doPost(e){
   
   // Parse the request sent by GitHub
   var post = JSON.parse(e.postData.getDataAsString());
-  var commitMessage = post.commits[0].message;
-  var author = post.commits[0].committer.name;
-  var repo = post.repository.full_name;
-  var changed_files = post.commits[0].modified;
-  var commitId = post.commits[0].id;
-  var timestamp = post.commits[0].timestamp;
+  // Possible data fields for your message, uncomment and use whichever you'd like!
+  //var commitMessage = post.commits[0].message;
+  //var author = post.commits[0].committer.name;
+  //var repo = post.repository.full_name;
+  //var changed_files = post.commits[0].modified;
+  //var commitId = post.commits[0].id;
+  //var timestamp = post.commits[0].timestamp;
   
   // Post the data to GroupMe
   sendAlert(">" + author + " has pushed commit '" + commitMessage + "' to " + repo + "\\n" +
