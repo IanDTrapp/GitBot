@@ -12,6 +12,7 @@ function doPost(e){
   var author = post.commits[0].committer.name;
   var repo = post.repository.full_name;
   var url = post.compare;
+  
   sendAlert(">" + author + " has pushed commit '" + commitMessage + "' to " + repo + "\\n" + "\\nView commit: \\n" + url);
   
 }
