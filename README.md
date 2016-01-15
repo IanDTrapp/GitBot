@@ -28,4 +28,7 @@ For now, GitBot only works with the push event, so select that bubble. In the fu
 
 Finally, make sure active is checked. You're good to go!
 
+# Tips and Tricks
+You can have one bot in one chat report the progress of multiple repos - just set them all up with the same web app URL!
+
 Special thanks to GitHub user wreed12345 for a great tutorial on getting started on GroupMe bots with Google Script
