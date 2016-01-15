@@ -1,4 +1,4 @@
-var botId = "YOUR_BOT_ID_HERE";
+var botId = "cc818acd41c291f7508b2a0029";
 
 function sendAlert(text){
   UrlFetchApp.fetch("https://api.groupme.com/v3/bots/post", {"method":"post", "payload":'{"bot_id":"' + botId + '","text":"' + text + '"}'})
@@ -12,7 +12,6 @@ function doPost(e){
   var author = post.commits[0].committer.name;
   var repo = post.repository.full_name;
   var url = post.compare;
- 
   sendAlert(">" + author + " has pushed commit '" + commitMessage + "' to " + repo + "\\n" + "\\nView commit: \\n" + url);
   
 }
